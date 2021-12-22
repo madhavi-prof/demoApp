@@ -1,0 +1,99 @@
+<Html>
+<head>
+    <title>
+        User Registration Page
+    </title>
+    <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  background-color: lightpink;
+}
+    </style>
+</head>
+<script>
+function saveFunction() {
+  if (confirm('Are you sure you want to update?')) {
+  // Save it!
+  console.log('Thing was saved to the database.');
+} else {
+  // Do nothing!
+  console.log('Thing was not saved to the database.');
+}
+}
+
+
+
+
+
+</script>
+
+<body>
+
+<form>
+    <div class="container">
+    <center><h1> User Registration Page</h1></center>
+
+    <label> Username: </label>
+    <input type="text" name="firstname" size="15"/> <br> <br>
+
+    <label> Name: </label>
+    <input type="text" name="middlename" size="15"/> <br> <br>
+
+    <label> Email: </label>
+    <input type="text" name="lastname" size="15"/> <br> <br>
+
+    <label>
+        Phone:
+    </label>
+    <input type="text" name="countrycode" value="+91" size="2"/>
+    <input type="text" name="phone" size="10"/> <br> <br>
+
+    <label>
+        Occupation:
+    </label>
+    <select>
+        <option value="IT">IT</option>
+        <option value="Engineer">Engineer</option>
+        <option value="Accountant">Accountant</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <br>
+    <br>
+
+    <textarea cols="80" rows="5" placeholder=" Address" value="address" required></textarea>
+
+    <br>
+    <br>
+    <label>
+        Gender:
+    </label><br>
+    <input type="radio" value="Male" name="gender" checked> Male
+    <input type="radio" value="Female" name="gender"> Female
+    <br>
+    <br>
+
+    <label>
+        Upload Profile Photo:
+    </label><br>
+    <input type="file" id="profilePic" name="profilePic">
+
+    <br> <br>
+    <br> <br>
+
+    <button onclick="saveFunction()">Save</button>
+    <button>Cancel</button>
+    </div>
+</form>
+</body>
+</html>
